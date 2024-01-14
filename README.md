@@ -1,9 +1,5 @@
-# InventorySystem-Spring-ReactJS
-This full-stack inventory management application allows users to perform essential CRUD operations on inventory items. The backend is built using Spring Boot and MongoDB for seamless data storage and retrieval. On the frontend, ReactJS provides a responsive user interface for interacting with the inventory.
-
-
-Inventory Management Application
-Features:
+# Inventory Management Application
+## Features:
 This full-stack inventory management application allows users to perform essential CRUD operations on inventory items. The backend is built using Spring Boot and MongoDB for seamless data storage and retrieval. The RESTful API, implemented with Spring and Hibernate, enables functionalities like adding, editing, updating, and deleting inventory items. On the frontend, ReactJS provides a responsive user interface for interacting with the inventory. The application ensures smooth communication between the frontend and backend, providing a comprehensive solution for managing and organizing inventory items.
 
 Technologies Used:
