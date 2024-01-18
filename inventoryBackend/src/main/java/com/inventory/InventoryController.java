@@ -23,16 +23,19 @@ public class InventoryController {
         return inventoryService.getItemById(id);
     }
 
+    @CrossOrigin(origins = "http://localhost:8080")
     @PostMapping
     public InventoryItem addItem(@RequestBody InventoryItem item) {
         return inventoryService.addItem(item);
     }
 
+    @CrossOrigin
     @PutMapping("/{id}")
     public void updateItem(@PathVariable String id, @RequestBody InventoryItem updatedItem) {
         inventoryService.updateItem(id, updatedItem);
     }
 
+    @CrossOrigin
     @DeleteMapping("/{id}")
     public void deleteItem(@PathVariable String id) {
         inventoryService.deleteItem(id);
