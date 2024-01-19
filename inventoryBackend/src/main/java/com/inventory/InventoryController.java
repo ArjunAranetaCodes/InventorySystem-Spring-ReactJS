@@ -37,7 +37,7 @@ public class InventoryController {
         inventoryService.updateItem(id, updatedItem);
     }
 
-    @CrossOrigin
+    @CrossOrigin(origins = "http://localhost:3000")
     @DeleteMapping("/{id}")
     public void deleteItem(@PathVariable String id) {
         inventoryService.deleteItem(id);
