@@ -18,12 +18,13 @@ public class InventoryController {
         return inventoryService.getAllItems();
     }
 
+    @CrossOrigin(origins = "http://localhost:3000")
     @GetMapping("/{id}")
     public Optional<InventoryItem> getItemById(@PathVariable String id) {
         return inventoryService.getItemById(id);
     }
 
-    @CrossOrigin(origins = "http://localhost:8080")
+    @CrossOrigin(origins = "http://localhost:3000")
     @PostMapping
     public InventoryItem addItem(@RequestBody InventoryItem item) {
         return inventoryService.addItem(item);
