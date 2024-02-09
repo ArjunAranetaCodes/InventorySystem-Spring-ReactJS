@@ -149,6 +149,23 @@ const _nav = [
   },
   {
     component: CNavGroup,
+    name: 'Inventory',
+    icon: <CIcon icon={cilNotes} customClassName="nav-icon" />,
+    items: [
+      {
+        component: CNavItem,
+        name: 'Add Item',
+        to: '/inventory/add',
+      },
+      {
+        component: CNavItem,
+        name: 'Show Items',
+        to: '/inventory/show-items',
+      },
+    ],
+  },
+  {
+    component: CNavGroup,
     name: 'Forms',
     icon: <CIcon icon={cilNotes} customClassName="nav-icon" />,
     items: [

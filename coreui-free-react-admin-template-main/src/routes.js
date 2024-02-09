@@ -35,6 +35,9 @@ const Range = React.lazy(() => import('./views/forms/range/Range'))
 const Select = React.lazy(() => import('./views/forms/select/Select'))
 const Validation = React.lazy(() => import('./views/forms/validation/Validation'))
 
+//Inventory
+const InventoryAdd = React.lazy(() => import('./views/inventory/add/Add.js'))
+const InventoryShowItems = React.lazy(() => import('./views/inventory/show/ShowItems.js'))
 const Charts = React.lazy(() => import('./views/charts/Charts'))
 
 // Icons
@@ -76,6 +79,13 @@ const routes = [
   { path: '/buttons/dropdowns', name: 'Dropdowns', element: Dropdowns },
   { path: '/buttons/button-groups', name: 'Button Groups', element: ButtonGroups },
   { path: '/charts', name: 'Charts', element: Charts },
+  { path: '/inventory/add', name: 'Inventory Add', element: InventoryAdd, exact: true },
+  {
+    path: '/inventory/show-items',
+    name: 'Inventory Show Items',
+    element: InventoryShowItems,
+    exact: true,
+  },
   { path: '/forms', name: 'Forms', element: FormControl, exact: true },
   { path: '/forms/form-control', name: 'Form Control', element: FormControl },
   { path: '/forms/select', name: 'Select', element: Select },
