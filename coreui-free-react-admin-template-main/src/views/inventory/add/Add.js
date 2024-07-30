@@ -8,7 +8,6 @@ import {
   CForm,
   CFormInput,
   CFormLabel,
-  CFormTextarea,
   CRow,
 } from '@coreui/react'
 import { useState, useEffect } from 'react'
@@ -45,6 +44,16 @@ const Add = () => {
           <CCardBody>
             <CForm onSubmit={handleAddOrUpdateTodo}>
               <div className="mb-3">
+                <CFormLabel htmlFor="skuInput">SKU</CFormLabel>
+                <CFormInput
+                  type="text"
+                  placeholder="SKU"
+                  aria-label="sku input text"
+                  id="skuInput"
+                  value=""
+                />
+              </div>
+              <div className="mb-3">
                 <CFormLabel htmlFor="itemNameInput">Item name</CFormLabel>
                 <CFormInput
                   type="text"
@@ -64,6 +73,16 @@ const Add = () => {
                   id="itemQuantityInput"
                   value={quantity || ''}
                   onChange={(e) => setQuantity(e.target.value)}
+                />
+              </div>
+              <div className="mb-3">
+                <CFormLabel htmlFor="itemPriceInput">Item Price</CFormLabel>
+                <CFormInput
+                  type="text"
+                  placeholder="Item Price"
+                  aria-label="item price input text"
+                  id="itemPriceInput"
+                  value=""
                 />
               </div>
               <div className="col-auto">
