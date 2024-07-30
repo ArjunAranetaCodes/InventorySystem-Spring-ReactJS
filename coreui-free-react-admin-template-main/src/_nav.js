@@ -4,6 +4,8 @@ import {
   cilBell,
   cilCalculator,
   cilChartPie,
+  cilCog,
+  cilColumns,
   cilCursor,
   cilDescription,
   cilDrop,
@@ -21,12 +23,58 @@ const _nav = [
     name: 'Dashboard',
     to: '/dashboard',
     icon: <CIcon icon={cilSpeedometer} customClassName="nav-icon" />,
-    badge: {
+    /*badge: {
       color: 'info',
       text: 'NEW',
-    },
+    },*/
   },
   {
+    component: CNavGroup,
+    name: 'Inventory',
+    icon: <CIcon icon={cilColumns} customClassName="nav-icon" />,
+    items: [
+      {
+        component: CNavItem,
+        name: 'Add Item',
+        to: '/inventory/add',
+      },
+      {
+        component: CNavItem,
+        name: 'Show Items',
+        to: '/inventory/show-items',
+      },
+    ],
+  },
+  {
+    component: CNavItem,
+    name: 'Reports',
+    to: '/reports',
+    icon: <CIcon icon={cilChartPie} customClassName="nav-icon" />,
+  },
+  {
+    component: CNavGroup,
+    name: 'Accounts',
+    icon: <CIcon icon={cilNotes} customClassName="nav-icon" />,
+    items: [
+      {
+        component: CNavItem,
+        name: 'Add Item',
+        to: '/accounts/add',
+      },
+      {
+        component: CNavItem,
+        name: 'Show Items',
+        to: '/accounts/show',
+      },
+    ],
+  },
+  {
+    component: CNavItem,
+    name: 'Settings',
+    to: '/theme/colors',
+    icon: <CIcon icon={cilCog} customClassName="nav-icon" />,
+  },
+  /*{
     component: CNavTitle,
     name: 'Theme',
   },
@@ -144,23 +192,6 @@ const _nav = [
         component: CNavItem,
         name: 'Dropdowns',
         to: '/buttons/dropdowns',
-      },
-    ],
-  },
-  {
-    component: CNavGroup,
-    name: 'Inventory',
-    icon: <CIcon icon={cilNotes} customClassName="nav-icon" />,
-    items: [
-      {
-        component: CNavItem,
-        name: 'Add Item',
-        to: '/inventory/add',
-      },
-      {
-        component: CNavItem,
-        name: 'Show Items',
-        to: '/inventory/show-items',
       },
     ],
   },
@@ -316,7 +347,7 @@ const _nav = [
     name: 'Docs',
     href: 'https://coreui.io/react/docs/templates/installation/',
     icon: <CIcon icon={cilDescription} customClassName="nav-icon" />,
-  },
+  },*/
 ]
 
 export default _nav
