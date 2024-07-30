@@ -38,7 +38,12 @@ const Validation = React.lazy(() => import('./views/forms/validation/Validation'
 //Inventory
 const InventoryAdd = React.lazy(() => import('./views/inventory/add/Add.js'))
 const InventoryShowItems = React.lazy(() => import('./views/inventory/show/ShowItems.js'))
+const Reports = React.lazy(() => import('./views/reports/Charts'))
 const Charts = React.lazy(() => import('./views/charts/Charts'))
+
+//Accounts
+const AccountShowItems = React.lazy(() => import('./views/accounts/show/ShowAccounts.js'))
+const AccountAdd = React.lazy(() => import('./views/accounts/add/Add.js'))
 
 // Icons
 const CoreUIIcons = React.lazy(() => import('./views/icons/coreui-icons/CoreUIIcons'))
@@ -79,6 +84,7 @@ const routes = [
   { path: '/buttons/dropdowns', name: 'Dropdowns', element: Dropdowns },
   { path: '/buttons/button-groups', name: 'Button Groups', element: ButtonGroups },
   { path: '/charts', name: 'Charts', element: Charts },
+  { path: '/reports', name: 'Reports', element: Reports },
   { path: '/inventory/add', name: 'Inventory Add', element: InventoryAdd, exact: true },
   {
     path: '/inventory/show-items',
@@ -86,6 +92,8 @@ const routes = [
     element: InventoryShowItems,
     exact: true,
   },
+  { path: '/accounts/show', name: 'Accounts Show', element: AccountShowItems, exact: true },
+  { path: '/accounts/add', name: 'Accounts Add', element: AccountAdd, exact: true },
   { path: '/forms', name: 'Forms', element: FormControl, exact: true },
   { path: '/forms/form-control', name: 'Form Control', element: FormControl },
   { path: '/forms/select', name: 'Select', element: Select },
